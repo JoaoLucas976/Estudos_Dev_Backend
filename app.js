@@ -2,7 +2,7 @@ let nome  = 'João';
 let valor;
 
 /* Comentário */
-console.log('Olá lundo');
+console.log('Olá mundo');
 console.log('Esse trecho será exibido no console do navegador do',nome);
 console.log('Valor', valor);
 
@@ -27,3 +27,41 @@ resultadoTriplicado = resultadoTriplicado + 5;
 
 console.log(primeiroNumero + segundoNumero);
 console.log(typeof(primeiroNumero + segundoNumero));
+
+/*
+* Tipos primitivos de variáveis
+* number = INT ou FLOAT
+* string = texto
+* boolean = true ou false
+* undefined
+* null
+*/
+
+// Criando um objeto
+let pen = {
+    itemName: 'Pen',
+    itemPrice: 3,
+    itemAvailable: true,
+    itemColor: 'Red'
+};
+console.log(pen);
+
+pen.itemColor = 'Blue'
+console.log(pen);
+console.log(pen.itemName);
+
+let friends = ['Marcos', 'Ana'];
+console.log(friends);
+
+function saleStatus(status, total) {
+    console.log('Transaction:', status, 'Total amount: $', total)
+}
+
+saleStatus('Approved', 30);
+
+function percentage10(price) {
+    newprice = price*0.9;
+    return newprice
+};
+
+console.log(percentage10(20))
