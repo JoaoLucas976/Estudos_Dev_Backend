@@ -47,7 +47,22 @@ switch(airport){
 // i = 10
 // while (i <= 20) {console.log('Numero', i); i++}
 
-i = 1
-do {
-    console.log('Numero ', i)
-} while (i <= 5)
+//i = 1
+//do {
+//    console.log('Numero ', i); i++
+//} while (i <= 5)
+
+let eleitor = {
+    'temIdadeMinima':true,
+    'temTituloEleitor':true
+};
+
+const eleitor3 = eleitor
+for (let i in eleitor){
+    console.log(i, eleitor3[i])
+}
+
+const friends = ['Marcus', 'Filipe', 'Romulo']
+for (let i of friends){
+    console.log(i)
+}
