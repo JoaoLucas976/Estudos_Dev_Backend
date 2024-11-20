@@ -1,3 +1,4 @@
-let nome = 'João Lucas';
+console.log('Script Conectado')
 
-document.getElementById('nome_autor') = nome
+let nome = 'João Lucas';
+document.getElementById('nome_autor').innerHTML = nome
