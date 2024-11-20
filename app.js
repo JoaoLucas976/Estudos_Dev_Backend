@@ -65,3 +65,20 @@ function percentage10(price) {
 };
 
 console.log(percentage10(20))
+
+// Comparações estrita e flexivel
+num1 = 1
+num2 = '1'
+console.log(num1 === num2) // Strict Equality
+console.log(num1 == num2)  // Loose Equality
+
+// Operador Ternário
+let motorista = 100
+let velocidade = motorista > 90 ? 'Acima' : 'Abaixo'
+console.log(velocidade)
+
+// Operadores Lógicos
+let temIdadeMinima = true
+let temTituloEleitor = true
+let podeVotar = temIdadeMinima && temTituloEleitor
+console.log(podeVotar)
