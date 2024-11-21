@@ -1,0 +1,1 @@
+let value = prompt('Enter the product value: ')

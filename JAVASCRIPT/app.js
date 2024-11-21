@@ -82,3 +82,49 @@ let temIdadeMinima = true
 let temTituloEleitor = true
 let podeVotar = temIdadeMinima && temTituloEleitor
 console.log(podeVotar)
+
+// Objetos
+let bookTitle = 'Atomic Habits';
+let bookAuthor = 'James Clear';
+let bookPages = 306;
+
+
+// Factory
+function createBook(title, author, pages){
+    const book = {
+        bookTitle: title,
+        bookAuthor: author,
+        bookPages: pages,
+        printBook: function(){
+            console.log('Printing...')
+        }
+    }
+    return book
+};
+
+// Constructor
+function CreateNewBook(title, author, pages){
+    this.bookTitle = title;
+    this.bookAuthor = author;
+    this.bookPages = pages
+}
+
+const newBook1 = new CreateNewBook('It', 'Stephen', 1000);
+console.log(newBook1);
+
+/*
+const book1 = createBook('Atomic Habits', 'James', 306)
+const book2 = createBook('Think and Grow', 'Napoleon', 450)
+book1.color = 'White Gold'
+console.log(book1)
+console.log(book2) */
+
+firstName = 'João'
+
+const email = 'Hi Joe, \nThe meeting is confirmed!\nAndre'
+const email2 = `Hi ${firstName}, 
+The meeting is confirmed! 
+Andre`
+
+console.log(email)
+console.log(email2)
