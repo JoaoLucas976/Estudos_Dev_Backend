@@ -12,7 +12,14 @@
     <title>Calculadora Gorgeta</title>
   </head>
   <body>
-    <main oninput="update()">
+    <!-- Dark Mode switch -->
+    <label class="switch">
+      <input id="switchBtn" type="checkbox" onclick="darkMode()">
+      <span class="slider round"></span>
+    </label>
+
+    <!-- Calculadora -->
+    <main id="Calculadora" oninput="update()">
       <h1>Calculadora Gorgeta</h1>
       <section>
         <div class="bill">

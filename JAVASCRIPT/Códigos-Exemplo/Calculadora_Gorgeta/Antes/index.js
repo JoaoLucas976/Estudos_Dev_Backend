@@ -1,3 +1,15 @@
+let mode = 'light';
+
+function darkMode(){
+    if (mode == 'light'){
+        console.log('Modo Escuro Ativado')
+        mode = 'dark'
+    } else {
+        console.log('Modo Claro Ativado')
+        mode = 'light'
+    }
+}
+
 function formatMoney(value){
     value = Math.ceil(value * 100)/100
     value = value.toFixed(2)
