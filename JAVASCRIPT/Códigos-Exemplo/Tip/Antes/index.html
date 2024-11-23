@@ -9,28 +9,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Quick Tip</title>
+    <title>Calculadora Gorgeta</title>
   </head>
   <body>
-    <main >
-      <h1>Quick Tip</h1>
+    <main oninput="update()">
+      <h1>Calculadora Gorgeta</h1>
       <section>
         <div class="bill">
-          <label for="yourBill">Bill</label>
+          <label for="yourBill">Conta</label>
           <input 
             type="number" 
-            placeholder="Your bill" 
-            id="yourBill"  />
+            placeholder="Sua Conta" 
+            id="yourBill" />
         </div>
         <div>
           <div class="space-between">
-            <label for="">Select tip</label
+            <label for="">Selecione Gorgeta</label
             ><span id="tipPercent">0%</span>
           </div>
           <input type="range" value="0" id="tipInput" class="range" />
         </div>
         <div class="space-between">
-          <span>Tip</span>
+          <span>Gorgeta</span>
           <span id="tipValue"></span>
         </div>
         <hr />
@@ -43,8 +43,8 @@
       <section>
         <div>
           <div class="space-between">
-            <label for="splitInput">Split</label>
-            <span id="splitValue">1</span>
+            <label for="splitInput">Pessoas</label>
+            <span id="splitValue">1 Pessoa</span>
           </div>
           <input
             type="range"
@@ -56,7 +56,7 @@
           />
         </div>
         <div class="space-between">
-          <span>Bill each</span>
+          <span>Conta/Pessoa</span>
           <span id="billEach"></span>
         </div>
       </section>

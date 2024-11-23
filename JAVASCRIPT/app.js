@@ -119,12 +119,101 @@ book1.color = 'White Gold'
 console.log(book1)
 console.log(book2) */
 
-firstName = 'João'
+// firstName = 'João'
 
-const email = 'Hi Joe, \nThe meeting is confirmed!\nAndre'
-const email2 = `Hi ${firstName}, 
-The meeting is confirmed! 
-Andre`
+// const email = 'Hi Joe, \nThe meeting is confirmed!\nAndre'
+// const email2 = `Hi ${firstName}, 
+// The meeting is confirmed! 
+// Andre`
 
-console.log(email)
-console.log(email2)
+// console.log(email)
+// console.log(email2)
+
+const movies = [
+    {id: 1, movieName: 'Dejavu'},
+    {id: 2, movieName: 'Back to the Future'},
+    {id: 3, movieName: 'The Matrix'}
+]
+
+console.log(movies.find(function(movie) {
+    return movie.movieName === 'The Matrix'
+}))
+
+console.log(movies.find(movie => movie.movieName === 'The Matrix'))
+
+// ------------------------------------------------------------------
+
+const num = [7, 8, 9]           // Array inicial
+num.push(10, 11, 12)            // Insere numeros no final do array
+num.unshift(1, 2, 3)            // Insere numeros no inicio do array
+num.splice(3, 0, 4, 5, 6)       // Insere itens apartir do index 3, remove 0 itens, insere os numeros 4, 5, 6
+num.shift()                     // Remove o primeiro elemento do array
+num.pop()                       // Remove o último elemento do array
+console.log(num.indexOf(8))     // Retorna o index do numero passado
+console.log(num.includes(4))    // Retorna se um numero existe ou não em uma array
+
+let numbers = [5, 6, 7, 8]
+let letters = ['a', 'b', 'c']
+
+all = numbers.concat(letters)
+half = numbers.slice(3,4).concat(letters.slice(0,1))
+console.log(all)
+console.log(half)
+
+// ------------------------------------------------------------------
+
+let clients = ['Joao', 'Marcus', 'Filipe']
+console.log(clients)
+clients.sort()
+console.log(clients)
+clients.reverse()
+console.log(clients)
+let clientsJoin = clients.join(', ')
+console.log(clientsJoin)
+
+// ------------------------------------------------------------------
+
+const tempLondon = [18, 13, 9, 2, -4]
+const tempPositive = tempLondon.every(value => value >= 0)    // Verifica uma condição para todo o array retorna true ou false
+const tempPositive2 = tempLondon.filter(value => value >= 0)  // Verifica uma condição para filtrar todo o array, retorna os valores do filtro
+console.log(tempPositive)
+
+// ------------------------------------------------------------------
+
+// Hoisting
+// Function Declaration (com hoisting)
+movie()
+
+function movie(){
+    console.log('The Matrix')
+}
+
+// Function Expression (sem hoisting)
+const car = function(){
+    console.log('Tesla')
+}
+
+car()
+
+const truck = car
+
+truck()
+
+// Arguments
+function price(a = 0, b = 0){
+    return a + b
+}
+console.log(price(10, 20))
+
+function price2(){
+    let total = 0
+    for (let value of arguments)
+        total += value
+    return total
+}
+console.log(price2(10, 20, 30, 40, 50))
+
+function carLoan(loan, rate = 2.9, years = 5){
+    return (loan * rate/100 * years) + loan
+}
+console.log(carLoan(20000))
