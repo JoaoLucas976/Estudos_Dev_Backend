@@ -1,3 +1,11 @@
+/*
+    Uma factory é uma função que retorna um objeto com características determinadas
+    para usar uma factory, deve-se associar o retorno do função à uma variável
+    Seu padrão de criação é o camelCase.
+    Ex:
+    carro = criarCarro()
+*/
+
 function criarAviao(tipo = 'Boing 747', velocidadeMaxima = 1327, capacidade = 410, combustivel = 226118){
     const aviao = {
         tipo: tipo,

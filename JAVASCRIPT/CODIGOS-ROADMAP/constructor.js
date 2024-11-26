@@ -1,3 +1,10 @@
+/*
+    Um constructor é uma estrutura para criação de objetos com propriedades definidas em si
+    Para instanciar um objeto com um constructor utiliza-se o conectivo new
+    Ex:
+    carro = new Carro()
+*/
+
 function Car(brand = 'BMW', color='Gray', power='617HP'){
     this.brand = brand,
     this.color = color,
