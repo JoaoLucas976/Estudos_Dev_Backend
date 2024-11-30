@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'area'>
+        Interaja...
+    </div>
+
+    <script>
+        // Eventos DOM
+        // Alguns exemplos de eventos DOM são:
+        
+        // mouseenter
+        // mousemove
+        // mousedown
+        // mouseup
+        // click
+        // mouseout
+
+        let area = document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.style.backgroundColor = 'Red'
+            area.innerHTML = 'Clicou'
+        }
+        function entrar(){
+            area.innerHTML = 'Entrou'
+        }
+        function sair(){
+            area.style.backgroundColor = 'green'
+            area.innerHTML = 'Saiu'
+        }
+    </script>
+</body>
+</html>

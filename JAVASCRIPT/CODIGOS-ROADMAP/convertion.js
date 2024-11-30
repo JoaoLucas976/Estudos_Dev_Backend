@@ -12,3 +12,5 @@ console.log(dinheiro)
 console.log(dinheiro.toFixed(2))     // Fixa o número de casas decimais depois do ponto 
 console.log(dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})) // Converte o valor para monetário em Real
 console.log(dinheiro.toLocaleString('en-US', {style: 'currency', currency: 'USD'})) // Converte o valor para monetário em Dólar
+console.log(dinheiro.toPrecision(3))    // Retorna o número com um número de dígitos de precisão (notação científica)
+console.log(dinheiro.toExponential(2))  // Retorna o número em notação científica
