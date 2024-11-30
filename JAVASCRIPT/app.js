@@ -217,3 +217,13 @@ function carLoan(loan, rate = 2.9, years = 5){
     return (loan * rate/100 * years) + loan
 }
 console.log(carLoan(20000))
+
+console.log('-----------------------------------------')
+
+let varA = 'A';
+let varB = 'B';
+let varC = 'C';
+
+[varA, varB, varC] = [varB, varC, varA]
+
+console.log(varA, varB, varC)
