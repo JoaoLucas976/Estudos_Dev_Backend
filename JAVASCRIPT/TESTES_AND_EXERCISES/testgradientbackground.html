@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Transição com Gradiente</title>
     <style>
-        body{
-            background-color: cyan;
+        .container {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            position: relative;
+            overflow: hidden;
+            transition: opacity 1s ease; /* Transição suave */
+        }
+        .gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            opacity: 0; /* Gradiente invisível inicialmente */
+            transition: opacity 1s ease;
         }
     </style>
 </head>
 <body>
-    <h1> TESTE DE BACKGROUND COM GRADIENTE </h1>
-    <button onclick="trocar()"> Trocar Plano de Fundo </button>
-    <div>
-        DIV de TESTE
+    <div class="container">
+        <div class="gradient"></div>
     </div>
+    <button id="changeBg">Mudar Gradiente</button>
+
     <script>
-        let modo = 'claro'
-        let corpo = document.body
-        function trocar(){
-            if (modo == 'claro'){
-                modo = 'escuro'
-                corpo.style.background = 'green'
-            } else {
-                modo = 'claro'
-                corpo.style.background = 'linear-gradient(to right, #ff7e5f, #feb47b)';
-            }
-            console.log(`Modo atual: ${modo}`)
-        }
+        const gradientDiv = document.querySelector('.gradient');
+        const button = document.getElementById('changeBg');
+
+        button.addEventListener('click', () => {
+            // Alterna a opacidade do gradiente
+            gradientDiv.style.opacity = gradientDiv.style.opacity === '1' ? '0' : '1';
+        });
     </script>
 </body>
 </html>
