@@ -1,11 +1,20 @@
 let mode = 'light';
 
 function darkMode(){
+    let fundo = document.getElementsByTagName('main')[0]
+    let titulo = document.querySelector('h1#titulo')
+    let corpo = document.body
     if (mode == 'light'){
         console.log('Modo Escuro Ativado')
+        corpo.style.background = '#898e8e'
+        fundo.style.background = 'linear-gradient(30deg, #898e8e, #272929)';
+        titulo.style.color = 'white';
         mode = 'dark'
-    } else {
+    } else if (mode == 'dark') {
         console.log('Modo Claro Ativado')
+        corpo.style.background = 'white'
+        fundo.style.background = 'linear-gradient(30deg, #3dc0c0, #5bceae)'; 
+        titulo.style.color = 'black';
         mode = 'light'
     }
 }

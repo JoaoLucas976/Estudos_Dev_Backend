@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h1> TESTE DE BACKGROUND COM GRADIENTE </h1>
+    <button onclick="trocar()"> Trocar Plano de Fundo </button>
+    <div>
+        DIV de TESTE
+    </div>
+    <script>
+        let modo = 'claro'
+        let corpo = document.body
+        function trocar(){
+            if (modo == 'claro'){
+                modo = 'escuro'
+                corpo.style.background = 'green'
+            } else {
+                modo = 'claro'
+                corpo.style.background = 'linear-gradient(to right, #ff7e5f, #feb47b)';
+            }
+            console.log(`Modo atual: ${modo}`)
+        }
+    </script>
+</body>
+</html>

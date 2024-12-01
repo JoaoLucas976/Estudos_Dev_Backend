@@ -2,6 +2,7 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 10px;
     color: #4e4d4d;
+    transition: 2s;
   }
   
   main {
@@ -44,6 +45,14 @@ html {
     flex: 3;
   }
   
+  #Calculadora{
+    transition: 2s;
+  }
+
+  #Calculadora:before{
+    transition: 2s;
+  }
+
   input[type="number"] {
     font-family: inherit;
     background: #f4f4f5;
@@ -120,8 +129,8 @@ html {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 
 .slider:before {
@@ -132,8 +141,8 @@ html {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 
 input:checked + .slider {
