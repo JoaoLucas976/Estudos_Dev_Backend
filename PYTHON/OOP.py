@@ -2,13 +2,13 @@ from random import randint
 
 def definir_raridade():
     numero = randint(1, 100)
-    if numero <= 50:
+    if numero < 50:
         return "Comum"
-    elif 50 < numero <= 80:
+    elif 50 <= numero < 80:
         return "Raro"
-    elif 80 < numero <= 95:
+    elif 80 <= numero < 99:
         return "Épico"
-    elif numero > 95:
+    elif numero >= 99:
         return "Lendário"
 
 def definir_item(raridade):

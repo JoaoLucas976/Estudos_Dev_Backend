@@ -1,0 +1,6 @@
+i = float(10.75)
+j = int(102)
+k = str('Bom dia')
+l = bool(True)
+x = list([1, 2, 3, 4, 5])
+y = dict({'chave1':'valor1', 'chave2':'valor2'})
