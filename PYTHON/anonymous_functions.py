@@ -24,3 +24,6 @@ print(cubador(2))
 dados = [('João', 23), ('Ana', 22), ('Paulo', 36), ('Pedro', 20)]
 ordered_by_age = sorted(dados, key=lambda x: x[1])
 print(ordered_by_age)
+
+# Declaring and using lambda functions in sequence
+print((lambda x,y: x*y)(2,3))
